@@ -4,3 +4,6 @@
 [submodule "components/M5Stack"]
 	path = components/M5Stack
 	url = https://github.com/m5stack/M5Stack
+[submodule "components/azure-sdk-for-c-arduino"]
+	path = components/azure-sdk-for-c-arduino
+	url = https://github.com/Azure/azure-sdk-for-c-arduino
