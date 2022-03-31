@@ -1,0 +1,26 @@
+From 8523572826c037c091fa54d32308604500e97ecc Mon Sep 17 00:00:00 2001
+From: renakim <rena@wiznet.io>
+Date: Thu, 31 Mar 2022 10:02:57 +0900
+Subject: [PATCH] Add component.mk to azure-sdk-for-c-arduino
+
+---
+ component.mk | 7 +++++++
+ 1 file changed, 7 insertions(+)
+ create mode 100644 component.mk
+
+diff --git a/component.mk b/component.mk
+new file mode 100644
+index 0000000..3bd5ac1
+--- /dev/null
++++ b/component.mk
+@@ -0,0 +1,7 @@
++#
++# Main Makefile. This is basically the same as a component makefile.
++#
++# (Uses default behaviour of compiling all source files in directory, adding 'include' to include path.)
++
++COMPONENT_SRCDIRS := src
++COMPONENT_ADD_INCLUDEDIRS := src
+-- 
+2.25.1
+
