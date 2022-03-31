@@ -22,9 +22,20 @@ chmod +x apply_patch.sh
 ```
 
 ### Setup com port number
+
 ```
 make menuconfig
+
+# Select menu
+Serial flasher config -> Default serial port
 ```
+* /dev/ttyS[N]
+  * Enter com port number
+  * If using `COM3` -> `/dev/ttyS3`
+
+* Save setting
+  * Select \<Yes\> in `Do you wish to save your new configuration?` Pop-up
+
 
 ### Write settings
 
