@@ -1,46 +1,49 @@
 # M5Stack Example
 
-## 개발 환경
+## Environment
 
-* WSL Ubuntu 환경에서 테스트
-* **ESP-IDF v3.3.6**
+* WSL(Version 1) Ubuntu 20.04
+* [**ESP-IDF v3.3.6**](https://docs.espressif.com/projects/esp-idf/en/v3.3.6/get-started/linux-setup.html)
 
 ## Process 
-### Clone
-```
-git clone https://github.com/renakim/m5stack-azure-app
-cd m5stack-azure-app/
-```
+### Setup project
 
-### 서브모듈 업데이트
 ```
+# Download
+git clone https://github.com/renakim/m5stack-azure-example
+cd m5stack-azure-example/
+
+# Update submodule
 git submodule update --init
-```
 
-### Patch 
-```
+# Patch
 chmod +x apply_patch.sh
 ./apply_patch.sh
 ```
 
-
-### Port 설정
-
+### Setup com port number
 ```
 make menuconfig
 ```
 
-### Build and Flash
+### Write settings
+
+`main/iot_configs.h`
+
+Refer to [readme file](main/readme.md) in main directory.
+
+
+## Build and Flash
 ```
+# Build
 make -j4
 
 * G0 - GND 연결하여 동작모드 변경
 
+# Flash
 make flash
-```
 
-### Monitor
-```
+# Monitor
 * GND 연결 해제
 make monitor
 ```
